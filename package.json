@@ -1,0 +1,17 @@
+{
+  "name": "lol",
+  "version": "1.0.0",
+  "description": "**Versión muy muy muy básica**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
