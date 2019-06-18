@@ -1,16 +1,23 @@
 language: node_js
 node_js:
-  - "stable"
+  - stable
 branches:
   only:
-    - deploy
+    - test
 after_success:
   - bash scripts/deploy.sh
 deploy:
   local_dir: build
   provider: pages
   skip_cleanup: true
-  github_token: $Git_Token
+  github_token: "$Git_Token"
   keep_history: true
   on:
     branch: deploy
+env:
+  global:
+    - REMOTE_PATH=travis/BattleGame
+    - REMOTE_USER=darius
+    - REMOTE_HOST=207.154.253.211
+before_install:
+  - bash scripts/install.sh
