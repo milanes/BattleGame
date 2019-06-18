@@ -4,8 +4,6 @@ node_js:
 branches:
   only:
     - test
-after_success:
-  - bash scripts/deploy.sh
 env:
   global:
     - REMOTE_PATH=travis/BattleGame
@@ -13,3 +11,5 @@ env:
     - REMOTE_HOST=207.154.253.211
 before_install:
   - bash scripts/install.sh
+after_success:
+  - bash scripts/deploy.sh
